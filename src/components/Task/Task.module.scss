@@ -1,0 +1,37 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 7px;
+  background: #daebf2;
+  color: #60a1bd;
+  input {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  p {
+    margin: 0px 10px 0px 0px;
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  span {
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 700;
+    color: #d1455a;
+  }
+}
+.itemCompleted {
+  background-color: #d1455a;
+  p {
+    color: #daebf2;
+    text-decoration: line-through;
+  }
+  span {
+    color: #daebf2;
+  }
+}

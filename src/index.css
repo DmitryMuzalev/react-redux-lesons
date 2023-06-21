@@ -7,4 +7,9 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
 }
