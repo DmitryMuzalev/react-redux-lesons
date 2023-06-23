@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './InputField.module.scss';
 import { useDispatch } from 'react-redux';
-import { addTask } from '../../store/todoSlice';
+import { addTodo } from '../../store/todoSlice';
 
 function InputField() {
   const [text, setText] = useState('');
@@ -17,7 +17,7 @@ function InputField() {
       <button
         onClick={() => {
           if (text.trim().length) {
-            dispatch(addTask({ text }));
+            dispatch(addTodo(text));
             setText('');
           }
           return;

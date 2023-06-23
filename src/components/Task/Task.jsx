@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import styles from './Task.module.scss';
-import { removeTask, toggleTaskChecked } from '../../store/todoSlice';
+import { deletedTodo, toggleStatusTask } from '../../store/todoSlice';
 
-function Task({ id, text, completed }) {
+function Task({ id, title, completed }) {
   const classesItem = [styles.item, completed ? styles.itemCompleted : '']
     .join(' ')
     .trim();
@@ -14,13 +14,13 @@ function Task({ id, text, completed }) {
         type="checkbox"
         checked={completed}
         onChange={() => {
-          dispatch(toggleTaskChecked({ id }));
+          dispatch(toggleStatusTask(id));
         }}
       />
-      <p>{text}</p>
+      <p>{title}</p>
       <span
         onClick={() => {
-          dispatch(removeTask({ id }));
+          dispatch(deletedTodo(id));
         }}
       >
         &times;
